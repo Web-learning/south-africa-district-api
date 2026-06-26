@@ -1,0 +1,50 @@
+{
+  "name": "south-africa-district-api",
+  "version": "1.0.0",
+  "description": "REST API and GeoJSON dataset for all South African District and Metropolitan Municipalities.",
+  "keywords": [
+    "south-africa",
+    "municipalities",
+    "geojson",
+    "gis",
+    "leaflet",
+    "openstreetmap",
+    "wikidata",
+    "express",
+    "api"
+  ],
+  "homepage": "https://github.com/yourname/south-africa-district-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/south-africa-district-api.git"
+  },
+  "license": "MIT",
+  "author": "Your Name",
+  "type": "module",
+  "main": "api/server.js",
+  "scripts": {
+    "start": "node api/server.js",
+    "dev": "nodemon api/server.js",
+    "update": "node scripts/update.js",
+    "osm": "node scripts/fetch_osm.js",
+    "wikidata": "node scripts/fetch_wikidata.js",
+    "statssa": "node scripts/fetch_statssa.js",
+    "build": "node scripts/build_geojson.js",
+    "merge": "node scripts/merge_data.js"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.2.0",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs-extra": "^11.2.0",
+    "osmtogeojson": "^3.0.0-beta.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
